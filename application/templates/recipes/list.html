@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Recipe</th>
+      <th>Type</th>
+    </tr>
+    {% for recipe in recipes %}
+    <tr>
+      <td>{{ recipe.name }}</td>
+      <td>{{ recipe.type }}</td>
+      <td>
+        <form method="POST" action="{{ url_for('recipe_set_type', recipe_id=recipe.id) }}">
+          <input type="submit" value="Vegetarian"/>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
