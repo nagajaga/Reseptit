@@ -1,3 +1,10 @@
-Ohjelma jolla voi luoda ja jakaa ruokaohjeita. Aineksia voi tallentaa ostoslistaan.
+A program for adding and sharing recipes
 
-[tietokantakaavio](https://i.imgur.com/i9WaOVs.jpg)
+[database diagram](https://i.imgur.com/i9WaOVs.jpg)
+
+[link to heroku](https://tsoha-reseptit.herokuapp.com/)
+
+[Instructions](https://github.com/nagajaga/Reseptit/blob/master/documentation/instructions.md)
+
+username: hello
+password: world
