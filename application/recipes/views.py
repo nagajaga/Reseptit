@@ -27,6 +27,7 @@ def recipes_create():
         
     t = Recipe(form.name.data)
     t.description = form.description.data
+    t.content = form.content.data
     t.account_id = current_user.id
     
     db.session().add(t)
