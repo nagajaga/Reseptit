@@ -34,3 +34,10 @@ def recipes_create():
     db.session().commit()
 
     return redirect(url_for("recipes_index"))
+
+
+@app.route("/recipes/<recipe_id>/")
+def recipes_view(recipe_id):
+    recipe = Recipe.query.get(recipe_id)
+    return render_template('recipe.html', recipe=recipe)
+
