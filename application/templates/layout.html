@@ -24,6 +24,13 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('recipes_form') }} ">Add a new recipe</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('shopping_form') }} ">Add to shopping list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('shopping_index') }} ">Display shopping list</a>
+        </li>
+
       </ul>
       <div class="form-inline mt-2 mt-md-0">
         {% if current_user.is_authenticated %}

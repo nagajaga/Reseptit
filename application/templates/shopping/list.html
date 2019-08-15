@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table cellpadding="10" border= "1">
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+    </tr>
+    {% for item in shoppinglist %}
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.quantity }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
