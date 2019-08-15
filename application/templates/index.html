@@ -1,7 +1,20 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <p>
-    Recipes
-  </p>
+
+{% if has_recipe is defined %}
+<p>
+  These users have posted recipes:
+</p>
+
+<ul>
+  {% for user in has_recipe %}
+  <li>
+     {{user.name}}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
 {% endblock %}

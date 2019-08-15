@@ -1,8 +1,7 @@
 from application import db
 
 from application.models import Base
-
-
+from sqlalchemy.sql import text
 class User(Base):
 
     __tablename__ = "account"
@@ -27,3 +26,17 @@ class User(Base):
 
     def is_authenticated(self):
         return True
+
+    @staticmethod
+    def users_with_recipes():
+        stmt = text("SELECT Account.id, Account.name FROM Account"
+                     " LEFT JOIN Recipe ON Recipe.account_id = Account.id"
+                     " GROUP BY Account.id"
+                     " HAVING COUNT(Recipe.id) > 0")
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"id":row[0], "name":row[1]})
+
+        return response
