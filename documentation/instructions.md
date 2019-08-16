@@ -17,4 +17,4 @@ Clicking List recipes will show all recipes and their descriptions. Clicking on 
 Clicking add to shopping list will take you to a form that requests an item and a quantity to add to the shopping list.
 
 ## Display shopping list
-Clicking display shopping list will show list all items and quantities on the shopping list.
+Clicking display shopping list will list all items and quantities on the shopping list.
