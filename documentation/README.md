@@ -6,5 +6,5 @@ A program for adding and sharing recipes
 
 [Instructions](https://github.com/nagajaga/Reseptit/blob/master/documentation/instructions.md)
 
-username: hello
+username: hello  
 password: world
