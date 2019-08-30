@@ -1,24 +1,23 @@
-from application import app, db
+from application import app, db, login_required
 from flask import render_template, request, url_for, redirect
 from application.recipes.models import Recipe
 from application.recipes.forms import RecipeForm
-from flask_login import login_required, current_user
+from flask_login import current_user
 
 
 @app.route("/recipes/new/")
-@login_required
+@login_required(role="ADMIN")
 def recipes_form():
     return render_template("recipes/new.html", form=RecipeForm())
 
 
 @app.route("/recipes", methods=["GET"])
-@login_required
 def recipes_index():
     return render_template("recipes/list.html", recipes=Recipe.query.all())
 
 
 @app.route("/recipes/", methods=["POST"])
-@login_required
+@login_required(role="ADMIN")
 def recipes_create():
     form = RecipeForm(request.form)
 
