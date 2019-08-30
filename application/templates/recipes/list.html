@@ -10,6 +10,8 @@
     <tr>
       <td><a href="{{ url_for('recipes_view',recipe_id=recipe.id) }}" >{{ recipe.name }}</a></td>
       <td>{{ recipe.description }}</td>
+      <td><a href="{{ url_for('recipes_update',recipe_id=recipe.id) }}" > Update </a></td>
+      <td><a href="{{ url_for('recipes_delete',recipe_id=recipe.id) }}" > Delete </a></td>
     </tr>
     {% endfor %}
   </table>
